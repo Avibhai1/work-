@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header{
+    background-image:linear-gradient(rgba(22, 199, 22, 0.5),rgba(0,0,0,0.5)),url(../IMAGE5.jpeg);
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    float:right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li{
+    display:inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color:#000;
+    padding: 5px 20px;
+    border:2px solid #transparent;
+    transition:0.6s ease;
+}
+
+ul li a:hover{
+    background-color: rgb(55, 87, 92);
+    color: #000;
+}
+ul li.active a{
+    background-color: rgb(80, 112, 117);
+    color: #000;
+}
+.logo img{
+    float:left;
+    width:100px;
+    height:auto;
+    margin-top: 25px;
+}
+
+.main{
+    max-width: 1200px;
+    margin:auto;
+}
+
+.img2{
+    width:200px;
+    margin-top: -30px;
+    margin-left: 650px;
+}
+
+.img1{
+    width: 200px;
+    margin-top: 100px;
+    margin-left: 500px;
+}
+
+.img3{
+    width:250px;
+    margin-top: -200px;
+    margin-left: 800px;
+}
+
+.img7{
+    height: 200px;
+    margin-top: -100px;
+    margin-left: 850px;
+}
+
+
+
+.title{
+    position: absolute;
+    top:20%;
+    left:25%;
+    transform: translate(-20%,-20%);
+}
+
+.title h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#000;
+    
+}
+
+.button{
+    position: absolute;
+    top:95%;
+    left:40%;
+    transform: translate(-70%,-70%);
+}
+
+.expl{
+    font-size:large;
+    color:#000;
+    padding: 5px 20px;
+    border:2px solid #transparent;
+    transition:0.6s ease;
+}
+
+.expl:hover{
+    background-color: rgb(104, 147, 150);
+    color: #000;
+}
+
+.tag{
+    position: absolute;
+    top:22%;
+    left:25%;
+}
+.tag1{
+    position: absolute;
+    top:40%;
+    left:2%;
+}
+
+.tag2{
+    position:absolute;
+    top:50%;
+    left:2%;
+}
