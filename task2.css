@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
+}
+
+body {
+  background-image: url("backgorund.avif");
+  background-size: cover;
+}
+
+.navbar {
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-size: 40px;
+}
+.logo:hover{
+  color:rgb(5, 107, 26)
+}
+
+.nav-ul {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-ul li {
+  list-style-type: none;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.nav-ul li:hover {
+  color: rgb(21, 237, 72);
+}
+
+.main-section {
+  width: 100vw;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+.main-heading {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.main-btn {
+  width: 120px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: rgb(5, 107, 26);
+}
+
+.main-btn:hover {
+  box-shadow: 0px 0px 2px 3px rgb(23, 20, 20);
+}
+
+
+
+.alert {
+  background-color: rgb(7, 138, 94);
+  width: 100vw;
+  height: 30px;
+  padding: 5px 0px 5px 5px;
+  font-size: 18px;
+  color: white;
+  display: none;
+  text-align: center;
+}
+.container {
+  position: relative;
+  top: 150px;
+  left: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 450px;
+  height: 450px;
+  border: 2px solid rgb(1, 22, 11);
+  border-radius: 10px;
+  color: white;
+}
+
+.container-heading {
+  font-size: 40px;
+  text-shadow: 1px 1px 4px white;
+}
+
+.question {
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px white;
+}
+
+.choices {
+  font-size: 18px;
+}
+
+.choicediv {
+  border-radius: 5px;
+  padding: 10px 0px 10px 5px;
+  margin-bottom: 10px;
+  width: 330px;
+  height: 40px;
+  text-align: start;
+  text-shadow: 1px 1px 1px white;
+  border: 2px solid rgb(5, 101, 45);
+}
+
+.selected {
+  background-color: rgb(4, 103, 58);
+}
+
+.next-btn {
+  width: 100px;
+  height: 30px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 18px;
+  border: 2px solid rgb(14, 63, 61);
+  background-color: rgb(17, 62, 46);
+  color: white;
+}
+
+.scorecard {
+  font-size: 30px;
+  position: relative;
+  bottom: 100px;
+}
+
+.play-btn {
+  position: relative;
+  bottom: 80px;
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 24px;
+  border: 2px solid rgb(7, 158, 67);
+  background-color: rgb(38, 4, 32);
+  color: white;
+  display: none;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.timer {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(15, 223, 50);
+  border: 2px solid white;
+  font-size: 37px;
+  text-align: center;
+}
