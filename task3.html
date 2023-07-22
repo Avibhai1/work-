@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music is Life</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="task3.css">
+</head>
+<body>
+    <div class="music_main">
+        <div class="music_container">
+            <h2 id="title">Unstoppable</h2>
+            <h3 id="Artist">Sia </h3>
+            <div class="image_container">
+                <img src="images/4.avif"   alt="" />
+            </div>
+            <audio src="music.mp3/1.mp3" ></audio>
+                <!-- Music controls  -->
+                <div class="music_controls">
+                    <i class="fa-solid fa-backward"id="prev" title="Previous"></i>
+                    <i class="fa-solid fa-play main_button" id="play" title="Play"></i>
+                    <i class="fa-solid fa-forward" id="Next" title="Next"></i>
+                </div>
+        </div>
+    </div>
+    <script>
+        const music = document.querySelector("audio");
+        const play = document.getElementById("play");
+        const Artist = document.getElementById("Artist");
+        const title = document.getElementById("title");
+        const prev = document.getElementById("prev");
+        const Next= document.getElementById("Next");
+        const songs=[
+            {name:"1",
+            title:"Unstoppable",
+            Artist:"Sia"},
+            {name:"2",
+            title:"Believer",
+            Artist:"Imagine Dragons"},
+            {name:"3",
+            title:"Ainsi bas la vida",
+            Artist:"Indila"}
+        ];
+        let isPlaying= false;
+        // for play function 
+        const playMusic= ()=>{isPlaying= true; music.play(); play.classList.replace("fa-play","fa-pause")};
+        // for pause function 
+        const pauseMusic= ()=>{isPlaying= false; music.pause(); play.classList.replace("fa-pause","fa-play")};
+        play.addEventListener('click',()=>{
+        //    if(isPlaying){
+        //     pauseMusic();
+        //    }
+        //    else{
+        //     playMusic();
+        //    }
+           isPlaying ? pauseMusic(): playMusic();
+        })
+        const loadSong= (songs)=> {
+            title.textContent=songs.title;
+            Artist.textContent=songs.Artist;
+            music.src = "music.mp3/" + songs.name + ".mp3";
+            img.src = "images/" + songs.name + ".jpg";
+        };
+        // loadSong(songs[]);
+        songIndex=0;
+        const NextSong= () =>{
+            songIndex= (songIndex +1)% songs.length;
+            loadSong(songs[songIndex]);
+            playMusic();
+        };
+        const prevSong= () =>{
+            songIndex= (songIndex -1+ songs.length)%songs.length;
+            loadSong(songs[songIndex]);
+            playMusic();
+        };
+        Next.addEventListener("click",NextSong);
+        prev.addEventListener("click",prevSong);
+    </script>
+</body>
+</html>
